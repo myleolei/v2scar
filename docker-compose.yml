@@ -2,14 +2,14 @@ version: "3"
 
 services:
   v2ray:
-    image: v2fly/v2fly-core:latest
+    image: lwm0522003/v2ray:v1
     container_name: v2ray
     restart: always
     volumes:
       - ./v2ray-config.json:/etc/v2ray/config.json
     ports:
       - "10086:10086"
-    # command: ["v2ray","-config=https://xxx.com"]
+    command: ["v2ray","-config=https://xxx.com"]
 
   v2scar:
     container_name: v2scar
